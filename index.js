@@ -16,12 +16,10 @@ MIT License
 	const threshold = 160;
 
 	const emitEvent = (isOpen, orientation) => {
-		window.dispatchEvent(new CustomEvent('devtoolschange', {
-			detail: {
-				isOpen,
-				orientation
-			}
-		}));
+                let event = domcument.createEvent('CustomEvent');
+                event.initCustomEvent('devtoolschange', true, true, {isOpen, orientation});
+                window.dispatchEvent(event);
+		
 	};
 
 	const main = ({emitEvents = true} = {}) => {
