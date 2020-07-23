@@ -41,6 +41,7 @@ $ npm install devtools-detect
 - Safari DevTools
 - Firefox DevTools
 - Opera DevTools
+- IE DevTools
 
 
 ## Caveats
